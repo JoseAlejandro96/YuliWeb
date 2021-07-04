@@ -1,5 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap');
+:root {
+  --feather: #77c9d4;
+  --marine: #57bc90;
+  --forest: #015249;
+  --sleek-grey: #a5a5af;
+  --gray: #cecece9a;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  background-color: var(--gray);
+  padding: 10px 0;
+  /*
+  position: sticky;
+  top: 0;
+  z-index: 100;*/
+}
+.container-header {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > .container-header > img {
+  max-height: 80px;
+}
+
+header > .container-header > nav > ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  min-width: 500px;
+}
+
+header a {
+  color: var(--forest);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Source Serif Pro', serif;
+}
+
+main {
+  height: 90vh;
+  background: url(imagenes/bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  z-index: 0;
+}
+
+main:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+.container-main {
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid white;
+}
+.circle > img {
+  margin-left: 40px;
+}
+
+.container-main > h1 {
+  margin-top: 20px;
+}
+.container-main > p {
+  max-width: 500px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.container-main .btn {
+  max-width: 300px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--forest);
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-family: 'Source Serif Pro', serif;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.container-main .btn:hover {
+  background-color: var(--feather);
+}
+
+/*Section*/
+.container-1 {
+  height: 80vh;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container-1 > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--forest);
+}
+.container-1 > div > h2 {
+  font-size: 28px;
+}
+.container-1 > div > p {
+  padding: 10px 50px;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  text-align: justify;
+}
+.container-1 > div > button {
+  max-width: 300px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--forest);
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-family: 'Source Serif Pro', serif;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container-1 img {
+  max-width: 500px;
+}
+.bg-gray {
+  background-color: var(--gray);
+}
+
+/*Footer*/
+footer {
+  padding: 20px 0px;
+  background-color: var(--forest);
+  color: white;
+}
+.container-footer {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.container-footer > div > img {
+  max-width: 150px;
+}
+.container-footer > div > ul {
+  list-style: none;
+}
+.container-footer a {
+  color: white;
+  text-decoration: none;
+}
+.social-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.social-links > div {
+  display: flex;
+}
+
+/*Servicios*/
+.container-servicios {
+  max-width: 1000px;
+  min-height: 75vh;
+  margin: 0 auto;
+  display: flex;
+  padding: 20px 0;
+}
+.title-services {
+  text-align: center;
+  color: var(--forest);
+  padding-top: 20px;
+  font-size: 30px;
+}
+.card {
+  min-height: 400px;
+  min-width: 300px;
+  border: 2px solid var(--forest);
+  border-radius: 10px;
+  margin: 0 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.card h2 {
+  font-size: 32px;
+}
+.precio {
+  font-size: 24px;
+  font-weight: bold;
+}
+.card button {
+  max-width: 300px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--forest);
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-family: 'Source Serif Pro', serif;
+  cursor: pointer;
+  border-radius: 5px;
 }
